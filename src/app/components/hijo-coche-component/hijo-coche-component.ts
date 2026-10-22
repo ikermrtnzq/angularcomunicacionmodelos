@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Coche } from '../../models/coche';
 
 @Component({
@@ -9,10 +9,7 @@ import { Coche } from '../../models/coche';
 })
 export class HijoCocheComponent {
 
-  public car: Coche;
-  constructor(){
-    this.car = new Coche("Pontiac", "Firebird", 0 , 23)
-  }
+  @Input() car! : Coche
 
   acelerarCoche(): void{
     this.car.velocidad += this.car.aceleracion;
