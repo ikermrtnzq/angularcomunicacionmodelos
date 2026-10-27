@@ -1,0 +1,8 @@
+<h1>Padre Numeros</h1>
+<h2>La suma es :  {{this.suma}}</h2>
+<button (click)="generarNumero()">generar Numero</button>
+@for (num of numeros; track num) {
+    <app-hijo-numero-component 
+    [numero] ="num"
+    (sumar)="sumar($event)"></app-hijo-numero-component>
+}

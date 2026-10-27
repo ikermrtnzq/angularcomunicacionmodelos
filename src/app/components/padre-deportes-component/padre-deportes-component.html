@@ -1,4 +1,7 @@
 <h1>Deportes</h1>
+<h2>{{this.mensaje}}</h2>
 @for(dep of arrayDeportes; track dep){
-    <app-deporte-component [sport]="dep"></app-deporte-component>
+    <app-deporte-component
+    (seleccionarFavorito)="seleccionarFavorito( $event)"
+    [sport]="dep"></app-deporte-component>
 }
